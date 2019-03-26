@@ -2,11 +2,9 @@ steps:
     
   - command: |
         echo "+++ :hammer: Building" && \
-        echo 1 | ./eosio_build.sh && \
+        echo 1 | ./eosio_build.sh | tee build.log  && \
         echo "--- :compression: Compressing build directory" && \
         tar -pczf build.tar.gz build/ 
-        | 
-        tee build.log 
     label: ":ubuntu: 18.04 Build"
     agents:
       queue: "automation-large-builder-fleet"
