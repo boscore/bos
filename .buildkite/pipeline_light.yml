@@ -1,5 +1,4 @@
 steps:
-  # add git check plugin
   - command: |
         echo "+++ :hammer: Building" && \
         echo 1 | ./eosio_build.sh | tee -a build.log && \
