@@ -2,8 +2,8 @@ steps:
   # add git check plugin
   - command: |
         echo "+++ :hammer: Building" && \
-        echo 1 | ./eosio_build.sh | tee -a build.log && \        
-        echo 1 | cat build.log | grep "error:" | tee -a error.log && \
+        echo 1 | ./eosio_build.sh | tee -a build.log && \
+        cat build.log | grep -E "(error:|Error)" | tee -a error.log && \              
         echo "--- :compression: Compressing build directory" && \
         tar -pczf build.tar.gz build/ 
     label: ":ubuntu: 18.04 Build"
