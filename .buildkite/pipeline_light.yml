@@ -2,7 +2,7 @@ steps:
     
   - command: |
         echo "+++ :hammer: Building" && \
-        echo 1 | touch build.log && cat build.log | grep "error:" | tee -a error.log && \
+        echo 1 | touch build.log && cat build.log | grep error | tee -a error.log && \
         echo 1 | ./eosio_build.sh | tee -a build.log && \        
         echo "--- :compression: Compressing build directory" && \
         tar -pczf build.tar.gz build/ 
