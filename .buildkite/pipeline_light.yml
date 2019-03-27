@@ -9,7 +9,10 @@ steps:
     label: ":ubuntu: 18.04 Build"
     agents:
       queue: "automation-large-builder-fleet"
-    artifact_paths: "build.tar.gz"
+    artifact_paths: 
+      - "build.tar.gz"
+      - "build.log"
+      - "error.log"
     plugins:
       docker#v1.4.0:
         image: "eosio/ci:ubuntu18"
@@ -40,6 +43,8 @@ steps:
       queue: "automation-large-builder-fleet"
     artifact_paths:
       - "mongod.log"
+      - "test.log"
+      - "error.log"
       - "build/genesis.json"
       - "build/config.ini"
     plugins:
