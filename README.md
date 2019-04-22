@@ -39,16 +39,6 @@ Attention:
 3. Treat update of eosio/eos code as new feature.
 4. Emergent issues must repaired by adopting hotfixes mode.
 
-## BOSCore Workflow
-BOSCore encourage community developer actively participate in contributing the code, members should follow the workflow below.
-![BOSCore Workflow](./images/bos-workflow.png)
-
-Attention: 
-1. Only allow Feature Branch or bug fix to submit PR to Develop Branch.
-2. Rebase is required before submitting PR to Develop Branch.
-3. Treat update of eosio/eos code as new feature.
-4. Emergent issues must repaired by adopting hotfixes mode.
-
 BOSCore bases on EOSIO, so you can also referer:
 
 [Getting Started](https://developers.eos.io/eosio-nodeos/docs/overview-1)  
